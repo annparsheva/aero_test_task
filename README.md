@@ -1,6 +1,8 @@
 # aero_test_task
 ## Задание
-https://taniadi.notion.site/Aero-DE-c7b2b267caa14570935d7cba30218865
+Реализовать логику ELT процесса для выгрузки данных из
+`https://statsapi.web.nhl.com/api/v1/teams/21/stats`
+
 ## Результирующая таблица
 ```
 CREATE TABLE raw_nhl_teams_stats 
