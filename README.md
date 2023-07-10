@@ -19,16 +19,16 @@ ENGINE MergeTree ORDER BY dateTime
 ```
 SELECT
     teamName,
-    regularSeasonStatRankings['stat.wins']
+    regularSeasonStatRankings['stat.wins'] AS wins_rank
 FROM default.raw_nhl_teams_stats
 ORDER BY dateTime ASC
 LIMIT 1 BY teamId
 
-Query id: 09bfca47-0880-41da-9723-2110eadf87d6
+Query id: 4ff1795f-6599-4ad9-bad4-2ac77c38aa5c
 
-┌─teamName───────────┬─arrayElement(regularSeasonStatRankings, 'stat.wins')─┐
-│ Colorado Avalanche │ 5th                                                  │
-└────────────────────┴──────────────────────────────────────────────────────┘
+┌─teamName───────────┬─wins_rank─┐
+│ Colorado Avalanche │ 5th       │
+└────────────────────┴───────────┘
 
-1 row in set. Elapsed: 0.015 sec.
+1 row in set. Elapsed: 0.021 sec. 
 ```
